@@ -20,28 +20,37 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
+  <meta name="description" content="SVD（Singular Value Decomposition）的直观理解一、SVD是什么（一）、SVD的基本概念在机器学习中，通常会进行数据压缩、噪声去除等。而奇异值分解（SVD）在这里主要用来进行降维。当矩阵非常大，数据非常多，计算会变得困难，在这里我们可以使用SVD。SVD保留了矩阵原有的结构特征。 奇异值分解可以写为$$M&#x3D;U\Sigma V^T$$任意矩阵$M$（非零的$m">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:url" content="http://example.com/2023/08/27/SVD%E7%9A%84%E7%9B%B4%E8%A7%82%E7%90%86%E8%A7%A3/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="SVD（Singular Value Decomposition）的直观理解一、SVD是什么（一）、SVD的基本概念在机器学习中，通常会进行数据压缩、噪声去除等。而奇异值分解（SVD）在这里主要用来进行降维。当矩阵非常大，数据非常多，计算会变得困难，在这里我们可以使用SVD。SVD保留了矩阵原有的结构特征。 奇异值分解可以写为$$M&#x3D;U\Sigma V^T$$任意矩阵$M$（非零的$m">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/.%5Ctemp%5C1653822776843(1).png">
+<meta property="og:image" content="http://example.com/.%5Ctemp%5C1653822885744(1).png">
+<meta property="og:image" content="http://example.com/.%5Ctemp%5C1653820662599(1).png">
+<meta property="og:image" content="http://example.com/.%5Ctemp%5C1653816064588.png">
+<meta property="article:published_time" content="2023-08-27T12:31:04.054Z">
+<meta property="article:modified_time" content="2022-05-29T15:20:40.278Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/.%5Ctemp%5C1653822776843(1).png">
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2023/08/27/SVD%E7%9A%84%E7%9B%B4%E8%A7%82%E7%90%86%E8%A7%A3/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>Hexo</title>
+  <title> | Hexo</title>
   
 
 
@@ -139,9 +148,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
@@ -157,10 +167,9 @@
       <meta itemprop="name" content="Hexo">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
+        <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2023/08/27/SVD%E7%9A%84%E7%9B%B4%E8%A7%82%E7%90%86%E8%A7%A3/" class="post-title-link" itemprop="url">Untitled</a>
-        </h2>
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -190,7 +199,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="SVD（Singular-Value-Decomposition）的直观理解"><a href="#SVD（Singular-Value-Decomposition）的直观理解" class="headerlink" title="SVD（Singular Value Decomposition）的直观理解"></a>SVD（Singular Value Decomposition）的直观理解</h1><h2 id="一、SVD是什么"><a href="#一、SVD是什么" class="headerlink" title="一、SVD是什么"></a>一、SVD是什么</h2><h3 id="（一）、SVD的基本概念"><a href="#（一）、SVD的基本概念" class="headerlink" title="（一）、SVD的基本概念"></a>（一）、SVD的基本概念</h3><p>在机器学习中，通常会进行数据压缩、噪声去除等。而奇异值分解（SVD）在这里主要用来进行降维。当矩阵非常大，数据非常多，计算会变得困难，在这里我们可以使用SVD。SVD保留了矩阵原有的结构特征。</p>
+        <h1 id="SVD（Singular-Value-Decomposition）的直观理解"><a href="#SVD（Singular-Value-Decomposition）的直观理解" class="headerlink" title="SVD（Singular Value Decomposition）的直观理解"></a>SVD（Singular Value Decomposition）的直观理解</h1><h2 id="一、SVD是什么"><a href="#一、SVD是什么" class="headerlink" title="一、SVD是什么"></a>一、SVD是什么</h2><h3 id="（一）、SVD的基本概念"><a href="#（一）、SVD的基本概念" class="headerlink" title="（一）、SVD的基本概念"></a>（一）、SVD的基本概念</h3><p>在机器学习中，通常会进行数据压缩、噪声去除等。而奇异值分解（SVD）在这里主要用来进行降维。当矩阵非常大，数据非常多，计算会变得困难，在这里我们可以使用SVD。SVD保留了矩阵原有的结构特征。</p>
 <p>奇异值分解可以写为<br>$$<br>M&#x3D;U\Sigma V^T<br>$$<br>任意矩阵$M$（非零的$m \times n$矩阵）可以分解为3个实矩阵的相乘。</p>
 <p>其中$U$是$m$阶正交矩阵，<br>$$<br>U&#x3D; \left[<br>\matrix{<br>  u_1 &amp; u_2 &amp; … &amp; u_m<br>}<br>\right]<br>$$<br>$V$是$n$阶正交矩阵，<br>$$<br>V&#x3D; \left[<br>\matrix{<br>  v_1 &amp; v_2 &amp; … &amp; v_n<br>}<br>\right]<br>$$<br>$\Sigma$是由降序排列的非负的对角线元素组成的$m \times n$矩形对角矩阵（$\Sigma&#x3D;diag(\sigma_1,\sigma_2,\cdot\cdot\cdot,\sigma_p)，p&#x3D;min(m,n)$）。</p>
 <p>$U\Sigma V^T$称为矩阵M的奇异值分解（SVD）,$\sigma_i$称为矩阵M的奇异值，$U$的列向量称为左奇异向量，$V$的列向量称为右奇异向量。</p>
@@ -238,91 +247,30 @@
 <p><a target="_blank" rel="noopener" href="http://www.ams.org/publicoutreach/feature-column/fcarc-svd">http://www.ams.org/publicoutreach/feature-column/fcarc-svd</a></p>
 <p>[3] 奇异值的物理意义是什么？ - 知乎用户的回答 - 知乎.2020<br><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/22237507/answer/801023732">https://www.zhihu.com/question/22237507/answer/801023732</a></p>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/08/27/hello-world/">
+        
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/08/27/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2023-08-27 19:59:41" itemprop="dateCreated datePublished" datetime="2023-08-27T19:59:41+08:00">2023-08-27</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/08/27/hello-world/" rel="prev" title="Hello World">
+      <i class="fa fa-chevron-left"></i> Hello World
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
-  
-
-
   
 
 
@@ -375,6 +323,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#SVD%EF%BC%88Singular-Value-Decomposition%EF%BC%89%E7%9A%84%E7%9B%B4%E8%A7%82%E7%90%86%E8%A7%A3"><span class="nav-number">1.</span> <span class="nav-text">SVD（Singular Value Decomposition）的直观理解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81SVD%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">1.1.</span> <span class="nav-text">一、SVD是什么</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%88%E4%B8%80%EF%BC%89%E3%80%81SVD%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-number">1.1.1.</span> <span class="nav-text">（一）、SVD的基本概念</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BE%8B%E5%A6%82%EF%BC%9A-left-matrix-x-1-y-1-x-2-y-2-x-3-y-3-x-4-y-4-right"><span class="nav-number">2.</span> <span class="nav-text">例如：$$\left[\matrix{  x_1 &amp; y_1\  x_2 &amp; y_2\  x_3 &amp; y_3\  x_4 &amp; y_4}\right]</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%88%E4%BA%8C%EF%BC%89%E3%80%81%E6%B1%82SVD%E5%88%86%E8%A7%A3"><span class="nav-number">2.0.1.</span> <span class="nav-text">（二）、求SVD分解</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E7%9B%B4%E8%A7%82%E7%90%86%E8%A7%A3SVD"><span class="nav-number">2.1.</span> <span class="nav-text">二、直观理解SVD</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%88%E4%B8%80%EF%BC%89%E3%80%81%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="nav-number">2.1.1.</span> <span class="nav-text">（一）、基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E6%97%8B%E8%BD%AC"><span class="nav-number">2.1.1.1.</span> <span class="nav-text">1.旋转</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E6%8B%89%E4%BC%B8"><span class="nav-number">2.1.1.2.</span> <span class="nav-text">2.拉伸</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%88%E4%BA%8C%EF%BC%89%E3%80%81%E4%BB%8E%E7%9F%A9%E9%98%B5%E5%88%86%E8%A7%A3%E7%9A%84%E8%A7%92%E5%BA%A6%E6%9D%A5%E7%90%86%E8%A7%A3SVD"><span class="nav-number">2.1.2.</span> <span class="nav-text">（二）、从矩阵分解的角度来理解SVD</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%88%E4%B8%89%EF%BC%89%E3%80%81%E4%BB%8E%E5%9F%BA%E5%8F%98%E6%8D%A2%E7%9A%84%E8%A7%92%E5%BA%A6%E6%9D%A5%E7%90%86%E8%A7%A3SVD"><span class="nav-number">2.1.3.</span> <span class="nav-text">（三）、从基变换的角度来理解SVD</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%88%E5%9B%9B%EF%BC%89%E3%80%81%E4%BB%8E%E5%8D%8F%E6%96%B9%E5%B7%AE%E8%A7%92%E5%BA%A6%E7%90%86%E8%A7%A3SVD%E7%9A%84%E6%95%B0%E6%8D%AE%E5%8E%8B%E7%BC%A9"><span class="nav-number">2.1.4.</span> <span class="nav-text">（四）、从协方差角度理解SVD的数据压缩</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%81%87%E8%AE%BE%E6%95%B0%E6%8D%AE%E9%9B%86%E4%B8%BAn%E7%BB%B4%EF%BC%8C%E5%85%B1m%E4%B8%AA%E6%95%B0%E6%8D%AE%EF%BC%8C%E6%AF%8F%E4%B8%80%E8%A1%8C%E5%B0%B1%E4%BB%A3%E8%A1%A8%E4%B8%80%E4%B8%AA%E6%95%B0%E6%8D%AE%EF%BC%8C%E6%9C%89%EF%BC%9A-M-left-matrix-%EF%BC%88x-1-T-%EF%BC%88x-2-T-%EF%BC%88x-m-T-right-%EF%BC%88x-i-%E8%A1%A8%E7%A4%BA%E7%AC%ACi%E4%B8%AA%E6%A0%B7%E6%9C%AC%EF%BC%8C-X-j-%E8%A1%A8%E7%A4%BA%E7%AC%ACj%E7%BB%B4%E7%89%B9%E5%BE%81%EF%BC%8C-x-i-j-%E8%A1%A8%E7%A4%BA%E7%AC%ACi%E4%B8%AA%E6%A0%B7%E6%9C%AC%E7%9A%84%E7%AC%ACj%E7%BB%B4%E7%89%B9%E5%BE%81%E3%80%82-M-T-M-left-x-1-x-2-%E2%80%A6-x-m-right-left-matrix-%EF%BC%88x-1-T-%EF%BC%88x-2-T-%EF%BC%88x-m-T-right"><span class="nav-number">3.</span> <span class="nav-text">假设数据集为n维，共m个数据，每一行就代表一个数据，有：$$M&#x3D;\left[\matrix{  （x^{(1)})^T   \  （x^{(2)})^T   \  .  \  .\  .\  （x^{(m)})^T}\right]$$$（x^{(i)})$表示第i个样本，$X_j$表示第j维特征，$x^{(i)}_j$表示第i个样本的第j维特征。$$M^T M&#x3D;\left[x^{(1)},x^{(2)},…,x^{(m)}\right]\left[\matrix{  （x^{(1)})^T   \  （x^{(2)})^T   \  .  \  .\  .\  （x^{(m)})^T}\right]</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E6%80%BB%E7%BB%93"><span class="nav-number">3.1.</span> <span class="nav-text">三、总结</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
